@@ -17,7 +17,7 @@
 package org.gradle.performance.regression.java
 
 import org.gradle.initialization.StartParameterBuildOptions.ConfigurationCacheOption
-import org.gradle.performance.AbstractCrossVersionGradleProfilerPerformanceTest
+import org.gradle.performance.AbstractCrossVersionPerformanceTest
 import org.gradle.performance.categories.PerformanceRegressionTest
 import org.gradle.performance.fixture.GradleBuildExperimentRunner
 import org.gradle.profiler.BuildContext
@@ -34,7 +34,7 @@ import static org.gradle.performance.generator.JavaTestProject.SMALL_JAVA_MULTI_
 import static org.junit.Assert.assertTrue
 
 @Category(PerformanceRegressionTest)
-class JavaConfigurationCachePerformanceTest extends AbstractCrossVersionGradleProfilerPerformanceTest {
+class JavaConfigurationCachePerformanceTest extends AbstractCrossVersionPerformanceTest {
     private File stateDirectory
 
     def setup() {
@@ -64,7 +64,7 @@ class JavaConfigurationCachePerformanceTest extends AbstractCrossVersionGradlePr
     @Unroll
     def "assemble on #testProject #action configuration cache state with #daemon daemon"() {
         given:
-        runner.targetVersions = ["6.7-20200827220028+0000"]
+        runner.targetVersions = ["6.7-20200915230440+0000"]
         runner.minimumBaseVersion = "6.6"
         runner.testProject = testProject.projectName
         runner.tasksToRun = ["assemble"]

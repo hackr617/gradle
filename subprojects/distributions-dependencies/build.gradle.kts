@@ -76,7 +76,7 @@ dependencies {
         api(libs.googleHttpClient)      { version { strictly(googleApiVersion) }}
         api(libs.googleHttpClientJackson2) { version { strictly(googleApiVersion) }}
         api(libs.googleOauthClient)     { version { strictly(googleApiVersion) }}
-        api(libs.gradleProfiler)        { version { strictly("0.14.0") }}
+        api(libs.gradleProfiler)        { version { strictly("0.15.0-alpha5") }}
         api(libs.groovy)                { version { strictly("1.3-${libs.groovyVersion}"); because("emulating the Groovy 2.4-style groovy-all.jar, see https://github.com/gradle/gradle-groovy-all") }}
         api(libs.gson)                  { version { strictly("2.8.5") }}
         api(libs.guava)                 { version { strictly("27.1-android"); because("JRE variant introduces regression - https://github.com/google/guava/issues/3223") }}
@@ -101,8 +101,8 @@ dependencies {
         api(libs.jsr305)                { version { strictly("3.0.2") }}
         api(libs.julToSlf4j)            { version { strictly(slf4jVersion) }}
         api(libs.junit)                 { version { strictly("4.13") }}
-        api(libs.junit5Vintage)         { version { strictly("5.6.2") }}
-        api(libs.junitPlatform)         { version { strictly("1.6.2") }}
+        api(libs.junit5Vintage)         { version { strictly("5.7.0") }}
+        api(libs.junitPlatform)         { version { strictly("1.7.0") }}
         api(libs.jzlib)                 { version { strictly("1.1.3") }}
         api(libs.kryo)                  { version { strictly("2.24.0") }}
         api(libs.log4jToSlf4j)          { version { strictly(slf4jVersion) }}
